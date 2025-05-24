@@ -1,0 +1,51 @@
+.top10-section {
+  padding: 1rem 2rem;
+  background-color: black;
+  color: white;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.top10-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.top10-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease; 
+}
+
+.top10-card:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+  box-shadow: 0 0 0 3px white;
+}
+
+
+.top10-number {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 5rem;
+  font-weight: 900;
+  color: white;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.top10-card img {
+  width: 100%;
+  border-radius: 4px;
+  position: relative;
+  z-index: 2;
+}

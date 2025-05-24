@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: lowercase;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.nav-links li:hover,
+.nav-links .active {
+  opacity: 1;
+  border-bottom: 2px solid white;
+}
+
+.navbar-right .icon {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
