@@ -54,6 +54,7 @@
 .navbar-right .icon:hover {
   transform: scale(1.2);
 }
+
 .logo-nav {
   display: flex;
   align-items: center;
