@@ -5,7 +5,7 @@ import { FaSearch, FaRegBookmark, FaUserCircle } from 'react-icons/fa';
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="navbar-left">
+      <div className="logo-nav">
         <h1 className="logo">max</h1>
         <ul className="nav-links">
           <li className="active">Inicio</li>
