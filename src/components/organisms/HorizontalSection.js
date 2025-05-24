@@ -39,6 +39,42 @@ const mockData = [
     image: 'https://m.media-amazon.com/images/M/MV5BZGZmOTZjNzUtOTE4OS00OGM3LWJiNGEtZjk4Yzg2M2Q1YzYxXkEyXkFqcGc@._V1_.jpg',
     label: ''
   },
+  {
+    id: 7,
+    title: 'Duster',
+    image: 'https://m.media-amazon.com/images/M/MV5BYWI3NDVjODctYTM2MS00YzZhLWJjOTItN2JmYTY5ODdkYTY4XkEyXkFqcGc@._V1_.jpg',
+    label: 'Nuevo Episodio'
+  },
+  {
+    id: 8,
+    title: 'Mickey 17',
+    image: 'https://m.media-amazon.com/images/M/MV5BN2UyMWYzYTctNmUxYS00MzI1LWFiNzgtY2I4ZjQ0MDJjYzJkXkEyXkFqcGc@._V1_.jpg',
+    label: 'Nuevo'
+  },
+  {
+  id: 9,  
+  title: 'Mi novia Polly',
+    image: 'https://m.media-amazon.com/images/M/MV5BMTcxMDMwODg3Nl5BMl5BanBnXkFtZTYwMTM4NTY3._V1_FMjpg_UX1000_.jpg',
+    label: ''
+  },
+  {
+    id: 10,
+    title: 'The Flash',
+    image: 'https://m.media-amazon.com/images/M/MV5BYjUwMzAwOTAtZjQzYy00MmFhLWE5N2EtYTZiYmI3NTY5NDdiXkEyXkFqcGc@._V1_.jpg',
+    label: ''
+  },
+  {
+    id: 11,
+    title: 'The Big Bang Theory',
+    image: 'https://m.media-amazon.com/images/M/MV5BZjgzY2QyNzItNDhhYi00ZWIwLWFjN2UtZDJkN2MxYWNjMmJjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+    label: ''
+  },
+  {
+    id: 12,
+    title: 'The Matrix',
+    image: 'https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_.jpg',
+    label: ''
+  }
 ];
 
 function HorizontalSection({ title }) {
