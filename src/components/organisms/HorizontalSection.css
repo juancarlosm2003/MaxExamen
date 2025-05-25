@@ -16,6 +16,7 @@
   scroll-snap-type: x mandatory;
   padding-bottom: 1rem;
 }
+
 .scroll-wrapper {
   position: relative;
 }
@@ -46,6 +47,7 @@
 .scroll-button.right {
   right: 0;
 }
+
 .card {
   position: relative;
   flex: 0 0 auto;
@@ -54,19 +56,21 @@
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.card:hover {
-  transform: scale(1.08);
-  cursor: pointer;
-  box-shadow: 0 0 0 3px white; 
+  z-index: 1;
 }
 
 .card img {
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.card:hover {
+  transform: scale(1.06);
+  z-index: 3;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
 }
 
 .label {

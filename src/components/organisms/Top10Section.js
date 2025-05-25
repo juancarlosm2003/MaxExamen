@@ -1,5 +1,6 @@
 import React from 'react';
 import './Top10Section.css';
+
 const top10Data = [
   {
     id: 1,
@@ -52,10 +53,16 @@ const top10Data = [
     image: 'https://m.media-amazon.com/images/M/MV5BMTNhMDJmNmYtNDQ5OS00ODdlLWE0ZDAtZTgyYTIwNDY3OTU3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
   }
 ];
+
 function Top10Section() {
   return (
     <div className="top10-section">
-      <h2 className="section-title">Top 10 series de hoy</h2>
+      <div className="top10-title-container">
+        <h2>
+          TOP 10 <span>PELÍCULAS</span>
+        </h2>
+        <span>HOY</span>
+      </div>
       <div className="top10-container">
         {top10Data.map((item, index) => (
           <div className="top10-card" key={item.id}>
