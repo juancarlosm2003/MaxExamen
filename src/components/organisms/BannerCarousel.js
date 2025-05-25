@@ -1,3 +1,4 @@
+// BannerCarousel.js
 import React from 'react';
 import './BannerCarousel.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -5,21 +6,25 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Link } from 'react-router-dom';
 
 const banners = [
   {
+    id: 'lazarus',
     title: 'Lazarus',
     description: 'Año 2052. Cuando una droga milagrosa se vuelve mortal, un grupo de forajidos llamado Lazarus debe salvar al mundo.',
     tags: ['16+', '1 temporada'],
     image: 'https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/7479ef42-c1ac-4473-854e-5a5c35894e35/546e380d-fe21-11ef-93b6-12953788022d?host=wbd-images.prod-vod.h264.io&partner=beamcom'
   },
   {
+    id: 'the-last-of-us',
     title: 'The Last of Us',
     description: 'Joel y Ellie cruzan un Estados Unidos postapocalíptico en una historia de supervivencia emocional y física.',
     tags: ['16+', '1 temporada'],
     image: 'https://beam-images.warnermediacdn.com/2025-03/the-last-of-us-s2-og-image.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com'
   },
   {
+    id: 'the-white-lotus',
     title: 'The White Lotus',
     description: 'Vacaciones de lujo se tornan oscuras mientras los huéspedes de un exclusivo resort enfrentan secretos y tensiones.',
     tags: ['18+', '2 temporadas'],
@@ -36,6 +41,11 @@ function BannerCarousel() {
       autoplay={{ delay: 5000, disableOnInteraction: false }}
       loop
       className="banner-swiper"
+      breakpoints={{
+        320: { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        1024: { slidesPerView: 1 }
+      }}
     >
       {banners.map((item, index) => (
         <SwiperSlide key={index}>
@@ -52,8 +62,8 @@ function BannerCarousel() {
               </div>
               <p className="banner-description">{item.description}</p>
               <div className="banner-buttons">
-                <button className="banner-button primary">Ver serie</button>
-                <button className="banner-button secondary">Ir a la serie</button>
+                <Link to={`/serie/${item.id}`} className="banner-button primary">Ver serie</Link>
+                <Link to={`/serie/${item.id}`} className="banner-button secondary">Ir a la serie</Link>
               </div>
             </div>
           </div>
