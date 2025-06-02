@@ -1,7 +1,8 @@
+/* Navbar layout */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem 2rem;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
   color: white;
@@ -10,19 +11,35 @@
   width: 100%;
   z-index: 10;
   font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+
+/* Left: Logo */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
 }
 
 .logo {
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: lowercase;
-  margin-right: 2rem;
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 
+/* Center: Links */
 .nav-links {
   display: flex;
   gap: 1.5rem;
   list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-links li {
@@ -38,15 +55,18 @@
   border-bottom: 2px solid white;
 }
 
+/* Right: Icons */
 .navbar-right {
-  display: flex;
+   display: flex;
   align-items: center;
-  gap: 1.2rem;
-  padding-right: 2rem;
+  gap: 0.8rem;
+  position: relative;
+  flex-shrink: 0;
+  width: fit-content; /* 👈 Evita que colapse */
 }
 
 .navbar-right .icon {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -55,7 +75,67 @@
   transform: scale(1.2);
 }
 
-.logo-nav {
+/* User popup */
+.user-icon {
+  position: relative;
+}
+
+.user-popup {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 200px;
+  z-index: 100;
+}
+
+.popup-section {
+   color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.popup-section:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.user-header {
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.logout {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  color: #ff6b6b;
+}
+.user-icon:hover .user-popup{
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-links img.logo {
+  height: 1.2rem; 
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: -2px; 
+}
+
+
+body {
+  overflow-x: hidden;
 }
